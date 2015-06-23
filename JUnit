@@ -1,0 +1,36 @@
+import static org.junit.Assert.*;
+import junit.framework.Assert;
+
+import org.junit.Test;
+
+
+public class Ex3Test {
+	
+	@Test
+	public void testGetResult1() {
+		Ex3 cal = new Ex3 ();
+		String expected = "0.2";
+		String result = cal.getResult(1, 5);
+		assertEquals(result, expected);
+	}
+	@Test
+	public void testGetResult2() {
+		Ex3 cal = new Ex3 ();
+		String expected = "0.007936(507936)";
+		String result = cal.getResult(1,126);
+		assertEquals(result, expected);
+	}
+	@Test
+	public void testGetResult3() {
+		Ex3 cal = new Ex3 ();
+		String expected = "----------\n"
+						+"7\n"
+						+"----------\n"
+						+"79\n"
+						+"----------\n"
+						+"79.365";
+		String result = cal.getResult(10000, 126);
+		assertEquals(result, expected);
+		
+	}
+}
